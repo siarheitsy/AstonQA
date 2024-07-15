@@ -76,7 +76,7 @@ public class TimeInterval {
         }
         String startTime;
         if (this.startTimeHours >= 0 && this.startTimeHours <= 10) {
-            startTime = Integer.toString(this.startTimeHours) + Integer.toString(this.startTimeHours);
+            startTime = "0" + Integer.toString(this.startTimeHours);
         } else {
             startTime = Integer.toString(this.startTimeHours);
         }
@@ -94,7 +94,7 @@ public class TimeInterval {
         }
         String endTime;
         if (this.endTimeHours >= 0 && this.endTimeHours <= 10) {
-            endTime = Integer.toString(this.endTimeHours) + Integer.toString(this.endTimeHours);
+            endTime = "0" + Integer.toString(this.endTimeHours);
         } else {
             endTime = Integer.toString(this.endTimeHours);
         }
