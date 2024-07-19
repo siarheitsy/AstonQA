@@ -25,7 +25,7 @@ public class Cat extends Animal {
 
     public void eat(int foodAmount, Bowl bowl) {
         if (bowl.isEnoughFood(foodAmount)) {
-            bowl.setFoodAmount(bowl.foodAmount - foodAmount);
+            bowl.setFoodAmount(bowl.getFoodAmount() - foodAmount);
             this.satiety = true;
             System.out.printf("\nКот %s наелся\n", this.name);
         } else {
@@ -41,37 +41,4 @@ public class Cat extends Animal {
         super.printCount();
     }
 
-    public static class Bowl {
-        private int foodAmount;
-
-        Bowl(int foodAmount) {
-            this.foodAmount = foodAmount;
-        }
-
-        public int getFoodAmount() {
-            return foodAmount;
-        }
-
-        public void setFoodAmount(int foodAmount) {
-            this.foodAmount = foodAmount;
-        }
-
-        public void addFoodAmount(int foodAmount) {
-            this.foodAmount += foodAmount;
-        }
-
-        public boolean isEnoughFood(int desiredEatAmount) {
-            if (desiredEatAmount <= this.foodAmount) {
-                return true;
-            } else {
-                return false;
-            }
-        }
-
-        public void massEating(Cat[] catArray) {
-            for (int i = 0; i < catArray.length; i++) {
-                catArray[i].eat(17, this);
-            }
-        }
-    }
 }

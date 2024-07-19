@@ -16,7 +16,7 @@ public class Main {
         dogArray[0].printCount();
         catArray[0].printCountSuper();
 
-        Cat.Bowl bowl = new Cat.Bowl(0);
+        Bowl bowl = Bowl.getBowlInstance(0);
         bowl.addFoodAmount(100);
         bowl.massEating(catArray);
 

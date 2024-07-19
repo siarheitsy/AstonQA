@@ -1,4 +1,4 @@
-public class Triangle implements GeometricFigure {
+public class Triangle implements GeometricFigure, GeometricFigurePerimeter, GeometricFigureArea, GeometricFigureColour {
 
     public double sideA;
     public double sideB;

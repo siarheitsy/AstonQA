@@ -1,4 +1,4 @@
-public class Rectangle implements GeometricFigure {
+public class Rectangle implements GeometricFigure, GeometricFigurePerimeter, GeometricFigureArea, GeometricFigureColour {
 
     public double sideA;
     public double sideB;

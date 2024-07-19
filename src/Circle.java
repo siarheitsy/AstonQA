@@ -1,4 +1,4 @@
-public class Circle implements GeometricFigure {
+public class Circle implements GeometricFigure, GeometricFigurePerimeter, GeometricFigureArea, GeometricFigureColour {
 
     public final static double PI = 3.14;
     public double radius;

@@ -1,2 +1,11 @@
-package PACKAGE_NAME;public interface GeometricFigureColour {
+public interface GeometricFigureColour {
+
+    default String defaultFillColour() {
+        return "бирюзовый";
+    }
+
+    default String defaultBorderColour() {
+        return "малиновый";
+    }
+
 }
