@@ -7,11 +7,11 @@ public class Bowl {
             this.foodAmount = foodAmount;
         }
 
-        public static Bowl getBowlInstance(int foodAmount){ // #3
-            if(bowlInstance == null){		//если объект еще не создан
-                bowlInstance = new Bowl(foodAmount);	//создать новый объект
+        public static Bowl getBowlInstance(int foodAmount){
+            if(bowlInstance == null){
+                bowlInstance = new Bowl(foodAmount);
             }
-            return bowlInstance;		// вернуть ранее созданный объект
+            return bowlInstance;
         }
 
         public int getFoodAmount() {
