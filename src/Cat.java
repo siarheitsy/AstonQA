@@ -1,14 +1,21 @@
 public class Cat extends Animal {
 
+    private String name;
     final static int distanceRunRestrictions = 200;
     final static int distanceSwimRestrictions = 0;
     private static int catsCount = 0;
     private boolean satiety;
 
-    Cat(String name) {
-        super(name);
+    Cat() {
+        super();
         this.satiety = false;
         catsCount++;
+    }
+
+    public static Cat createCat(String name) {
+        Cat tempCat = new Cat();
+        tempCat.name = name;
+        return tempCat;
     }
 
     public void run(float distance) {

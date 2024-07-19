@@ -1,12 +1,19 @@
 public class Dog extends Animal {
 
+    private String name;
     final static int distanceRunRestrictions = 500;
     final static int distanceSwimRestrictions = 10;
     private static int dogsCount = 0;
 
-    Dog(String name) {
-        super(name);
+    Dog() {
+        super();
         dogsCount++;
+    }
+
+    public static Dog createDog(String name) {
+        Dog tempDog = new Dog();
+        tempDog.name = name;
+        return tempDog;
     }
 
     public void run(float distance) {

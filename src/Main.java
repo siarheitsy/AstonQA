@@ -2,15 +2,15 @@ public class Main {
 
     public static void main(String[] args) {
         Cat[] catArray = new Cat[6];
-        catArray[0] = new Cat("Марсик");
-        catArray[1] = new Cat("Барсик");
-        catArray[2] = new Cat("Варсик");
-        catArray[3] = new Cat("Гарсик");
-        catArray[4] = new Cat("Зарсик");
-        catArray[5] = new Cat("Диоклетиан");
+        catArray[0] = Cat.createCat("Марсик");
+        catArray[1] = Cat.createCat("Барсик");
+        catArray[2] = Cat.createCat("Варсик");
+        catArray[3] = Cat.createCat("Гарсик");
+        catArray[4] = Cat.createCat("Зарсик");
+        catArray[5] = Cat.createCat("Диоклетиан");
         Dog[] dogArray = new Dog[2];
-        dogArray[0] = new Dog("Берта");
-        dogArray[1] = new Dog("Альма");
+        dogArray[0] = Dog.createDog("Берта");
+        dogArray[1] = Dog.createDog("Альма");
 
         catArray[0].printCount();
         dogArray[0].printCount();
