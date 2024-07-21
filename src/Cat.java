@@ -20,7 +20,7 @@ public class Cat extends Animal {
 
     public void run(float distance) {
         if (distance > 0 && distance <= distanceRunRestrictions) {
-            super.run(distance);
+            System.out.printf("\nКот пробежал %f метров\n", distance);
         } else {
             System.out.println("Такое расстояние неподвластно котам");
         }

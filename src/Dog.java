@@ -18,7 +18,7 @@ public class Dog extends Animal {
 
     public void run(float distance) {
         if (distance > 0 && distance <= distanceRunRestrictions) {
-            super.run(distance);
+            System.out.printf("\nСобака пробежала %f метров\n", distance);
         } else {
             System.out.println("Такое расстояние неподвластно собакам");
         }
@@ -26,7 +26,7 @@ public class Dog extends Animal {
 
     public void swim(float distance) {
         if (distance > 0 && distance <= distanceSwimRestrictions) {
-            super.swim(distance);
+            System.out.printf("\nСобака проплыла %f метров\n", distance);
         } else {
             System.out.println("Такое расстояние неподвластно собакам");
         }
