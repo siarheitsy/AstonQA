@@ -1,11 +1,11 @@
 public class Rectangle implements GeometricFigure, GeometricFigurePerimeter, GeometricFigureArea, GeometricFigureColour {
 
-    public double sideA;
-    public double sideB;
-    double perimeter;
-    double area;
-    String fillColour;
-    String borderColour;
+    private double sideA;
+    private double sideB;
+    private double perimeter;
+    private double area;
+    private String fillColour;
+    private String borderColour;
 
     Rectangle(double sideA, double sideB) {
         this.sideA = sideA;

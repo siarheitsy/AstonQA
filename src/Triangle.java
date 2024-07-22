@@ -1,13 +1,13 @@
 public class Triangle implements GeometricFigure, GeometricFigurePerimeter, GeometricFigureArea, GeometricFigureColour {
 
-    public double sideA;
-    public double sideB;
-    public double sideC;
-    public double sideHeight;
-    double perimeter;
-    double area;
-    String fillColour;
-    String borderColour;
+    private double sideA;
+    private double sideB;
+    private double sideC;
+    private double sideHeight;
+    private double perimeter;
+    private double area;
+    private String fillColour;
+    private String borderColour;
 
     Triangle(double sideA, double sideB, double sideC) {
         this.sideA = sideA;

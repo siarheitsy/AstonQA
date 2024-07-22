@@ -1,11 +1,11 @@
 public class Circle implements GeometricFigure, GeometricFigurePerimeter, GeometricFigureArea, GeometricFigureColour {
 
     public final static double PI = 3.14;
-    public double radius;
-    double perimeter;
-    double area;
-    String fillColour;
-    String borderColour;
+    private double radius;
+    private double perimeter;
+    private double area;
+    private String fillColour;
+    private String borderColour;
 
     Circle(double radius) {
         this.radius = radius;
