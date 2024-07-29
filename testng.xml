@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite">
+    <test name="Validation">
+        <parameter name="stringValue" value="-1"></parameter>
+        <groups>
+            <run>
+                <include name="validation"></include>
+            </run>
+        </groups>
+        <classes>
+            <class name="FactorialOfNegativeNumberTest"></class>
+            <class name="CorrectResultTest"></class>
+            <class name="FactorialOfZeroTest"></class>
+            <class name="FactorialOfOutOfRangeNumberTest"></class>
+        </classes>
+    </test>
+</suite>
