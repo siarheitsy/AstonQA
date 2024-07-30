@@ -3,7 +3,7 @@
 
 <suite name="All Test Suite">
     <test name="Validation">
-        <parameter name="stringValue" value="-1"></parameter>
+        <parameter name="stringNegativeValue" value="-1"></parameter>
         <groups>
             <run>
                 <include name="validation"></include>
@@ -11,9 +11,18 @@
         </groups>
         <classes>
             <class name="FactorialOfNegativeNumberTest"></class>
+            <class name="FactorialOfOutOfRangeNumberTest"></class>
+        </classes>
+    </test>
+    <test name="Functional">
+        <groups>
+            <run>
+                <include name="functional"></include>
+            </run>
+        </groups>
+        <classes>
             <class name="CorrectResultTest"></class>
             <class name="FactorialOfZeroTest"></class>
-            <class name="FactorialOfOutOfRangeNumberTest"></class>
         </classes>
     </test>
 </suite>

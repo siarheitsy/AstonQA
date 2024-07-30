@@ -7,7 +7,7 @@ import java.math.BigInteger;
 
 public class FactorialOfNegativeNumberTest {
 
-    @Parameters({"stringValue"})
+    @Parameters({"stringNegativeValue"})
     @Test(groups = {"validation"}, description = "Factorial handling number exceedeng lower limit test")
     public void negativeNumberTest(String stringValue) {
         int value = Integer.valueOf(stringValue);
