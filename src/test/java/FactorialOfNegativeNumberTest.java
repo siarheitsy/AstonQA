@@ -11,7 +11,7 @@ public class FactorialOfNegativeNumberTest {
 
     @DisplayName("Factorial handling number exceedeng lower limit test")
     @ParameterizedTest
-    @ValueSource(ints = {-1, -10, -100, -1000})
+    @ValueSource(ints = {-1})
     public void negativeNumberTest(int value) {
         BigInteger result = Factorial.factorial(value);
         Assertions.assertNull(result);

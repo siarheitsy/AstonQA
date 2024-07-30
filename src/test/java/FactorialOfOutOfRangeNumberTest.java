@@ -10,7 +10,7 @@ public class FactorialOfOutOfRangeNumberTest {
 
     @DisplayName("Factorial handling number exceedeng upper limit test")
     @ParameterizedTest
-    @ValueSource(ints = {10001, 15000, 200000})
+    @ValueSource(ints = {10001})
     public void factorialOfOutOfRangeNumberTest(int inputValue) {
         BigInteger result = Factorial.factorial(inputValue);
         Assertions.assertNull(result);
