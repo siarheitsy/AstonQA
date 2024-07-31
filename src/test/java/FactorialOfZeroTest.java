@@ -10,7 +10,7 @@ public class FactorialOfZeroTest {
     public void factorialOfZeroTest() {
         try {
             BigInteger result = Factorial.factorial(0);
-            Assert.assertTrue(result.compareTo(BigInteger.ONE) == 0);
+            Assert.assertEquals(result.compareTo(BigInteger.ONE), 0);
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
