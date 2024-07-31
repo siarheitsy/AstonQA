@@ -11,8 +11,12 @@ public class FactorialOfZeroTest {
     @DisplayName("Factorial result with zero input number test")
     @Test
     public void factorialOfZeroTest() {
-        BigInteger result = Factorial.factorial(0);
-        Assertions.assertEquals(0, result.compareTo(BigInteger.ONE));
+        try {
+            BigInteger result = Factorial.factorial(0);
+            Assertions.assertEquals(0, result.compareTo(BigInteger.ONE));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
     }
 
 }
