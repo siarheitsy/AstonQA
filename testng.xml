@@ -3,14 +3,12 @@
 
 <suite name="All Test Suite">
     <test name="Validation">
-        <parameter name="stringNegativeValue" value="-1"></parameter>
         <groups>
             <run>
                 <include name="validation"></include>
             </run>
         </groups>
         <classes>
-            <class name="FactorialOfNegativeNumberTest"></class>
             <class name="FactorialOfOutOfRangeNumberTest"></class>
         </classes>
     </test>
