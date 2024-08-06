@@ -1,9 +1,12 @@
 package MTSPageObjectModel;
 
+import org.example.IsElementLocatedInFrame;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.Objects;
@@ -78,10 +81,18 @@ public class MainPage {
         return submitOrwcForm();
     }
 
+    public boolean isBepaidAppmodalLocatedInFrame() {
+        return IsElementLocatedInFrame.isElementLocatedInFrame(driver, bepaidAppModalContentBlock);
+    }
+
     public boolean isBepaidAppModalLoaded() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(bepaidAppModalContentBlock));
-        return driver.findElement(bepaidAppModalContentBlock).isDisplayed();
+        if (isBepaidAppmodalLocatedInFrame()) {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+            wait.until(ExpectedConditions.visibilityOfElementLocated(bepaidAppModalContentBlock));
+            return driver.findElement(bepaidAppModalContentBlock).isDisplayed();
+        } else {
+            return false;
+        }
     }
 
 }

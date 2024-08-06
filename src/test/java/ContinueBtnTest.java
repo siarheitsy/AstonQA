@@ -28,10 +28,6 @@ public class ContinueBtnTest {
         driver.manage().timeouts().implicitlyWait(4000, TimeUnit.MILLISECONDS);
         MainPage mainPage = new MainPage(driver);
         mainPage.submitOrwcFormWithCredentials("(29)777-77-77", "1");
-        if (IsElementLocatedInFrame.isElementLocatedInFrame(driver)) {
-            Assert.assertTrue(mainPage.isBepaidAppModalLoaded());
-        } else {
-            Assert.fail("Не найдено фреймов с нужным элементом");
-        }
+        Assert.assertTrue(mainPage.isBepaidAppModalLoaded());
     }
 }
