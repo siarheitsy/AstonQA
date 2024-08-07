@@ -1,14 +1,8 @@
 package MTSPageObjectModel;
 
-import org.example.IsElementLocatedInFrame;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
-import java.time.Duration;
 import java.util.Objects;
 
 public class MainPage {
@@ -23,6 +17,7 @@ public class MainPage {
     private By orwcContinueBtn = By.xpath("//button[@type='submit' and contains(text(), 'Продолжить')]");
 
     private By bepaidAppModalContentBlock = By.xpath("//div[@class='app-wrapper__content']");
+    private By bepaidAppPhoneErrorMessage = By.xpath("//p[text()='Неверно указан номер']");
 
     private final WebDriver driver;
 
@@ -45,14 +40,6 @@ public class MainPage {
             if (isLogoPresented) break;
         }
         return isLogoPresented;
-    }
-
-    public String[] getOrwcPaymentSystemLogoPaths() {
-        String[] logoPaths = new String[5];
-        for (int i = 0; i < 5; i++) {
-            logoPaths[i] = driver.findElements(orwcPaymentSystemLogoImage).get(i).getAttribute("src");
-        }
-        return logoPaths;
     }
 
     public PaymentProcedureAndOnlinePaymentsSecurityPage aboutOrwcServiceBtnClick() {
@@ -81,18 +68,8 @@ public class MainPage {
         return submitOrwcForm();
     }
 
-    public boolean isBepaidAppmodalLocatedInFrame() {
-        return IsElementLocatedInFrame.isElementLocatedInFrame(driver, bepaidAppModalContentBlock);
-    }
-
-    public boolean isBepaidAppModalLoaded() {
-        if (isBepaidAppmodalLocatedInFrame()) {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
-            wait.until(ExpectedConditions.visibilityOfElementLocated(bepaidAppModalContentBlock));
-            return driver.findElement(bepaidAppModalContentBlock).isDisplayed();
-        } else {
-            return false;
-        }
+    public boolean isBepaidAppPhoneErrorMessageDisplayed() {
+        return driver.findElement(bepaidAppPhoneErrorMessage).isDisplayed();
     }
 
 }
