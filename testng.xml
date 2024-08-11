@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Functional">
+        <classes>
+            <class name="ORWC.ConnectionEmptyFieldsPlaceholdersTest"></class>
+            <class name="ORWC.InternetEmptyFieldsPlaceholdersTest"></class>
+            <class name="ORWC.InstalmentEmptyFieldsPlaceholdersTest"></class>
+            <class name="ORWC.ArrearsEmptyFieldsPlaceholdersTest"></class>
+            <class name="ORWC.ContinueBtnTest"></class>
+            <class name="BepaidApp.BepaidAppPayDescriptionCostValueTest"></class>
+            <class name="BepaidApp.BepaidAppPayDescriptionTextValueTest"></class>
+            <class name="BepaidApp.BepaidAppBtnCostValueTest"></class>
+            <class name="BepaidApp.BepaidAppCardInputPlaceholdersTest"></class>
+            <class name="BepaidApp.BepaidAppCardLogosPresence"></class>
+        </classes>
+    </test>
+</suite>
