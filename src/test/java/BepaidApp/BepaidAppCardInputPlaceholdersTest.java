@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class BepaidAppCardInputPlaceholdersTest extends BaseTest {
 
-    @Test(groups = {"functional"}, description = "Check empty input fields values option in BepaidApp modal")
+    @Test(groups = {"functional"}, description = "Check empty input fields values option in BepaidApp modal", priority = -2)
     public static void bepaidAppCardInputPlaceholdersTest() {
         MainPage mainPage = new MainPage(BaseTest.driver);
         bepaidAppCardNumberCheck(mainPage);

@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class ConnectionEmptyFieldsPlaceholdersTest extends BaseTest {
 
-    @Test(groups = {"functional"}, description = "Check empty fields values of 'Connection' option in online replenishment block")
+    @Test(groups = {"functional"}, description = "Check empty fields values of 'Connection' option in online replenishment block", priority = -10)
     public static void connectionEmptyFieldsPlaceholdersTest() {
         MainPage mainPage = new MainPage(BaseTest.driver);
         mainPage.chooseOrwcSelectOption("Задолженность");

@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 public class BepaidAppPayDescriptionCostValueTest extends BaseTest {
 
-    @Test(groups = {"functional"}, description = "Check cost value in BepaidApp modal")
+    @Test(groups = {"functional"}, description = "Check cost value in BepaidApp modal", priority = -5)
     public static void bepaidAppPayDescriptionCostValueTest() {
         BaseTest.driver.manage().timeouts().implicitlyWait(1500, TimeUnit.MILLISECONDS);
         MainPage mainPage = new MainPage(BaseTest.driver);

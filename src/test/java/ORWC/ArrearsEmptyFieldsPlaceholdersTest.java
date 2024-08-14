@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class ArrearsEmptyFieldsPlaceholdersTest extends BaseTest {
 
-    @Test(groups = {"functional"}, description = "Check empty fields values of 'Arrears' option in online replenishment block")
+    @Test(groups = {"functional"}, description = "Check empty fields values of 'Arrears' option in online replenishment block", priority = -7)
     public static void arrearsEmptyFieldsPlaceholdersTest() {
         MainPage mainPage = new MainPage(BaseTest.driver);
         mainPage.chooseOrwcSelectOption("Задолженность");

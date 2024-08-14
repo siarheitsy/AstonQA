@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class BepaidAppBtnCostValueTest extends BaseTest {
 
-    @Test(groups = {"functional"}, description = "Check value of 'Pay' button in BepaidApp modal")
+    @Test(groups = {"functional"}, description = "Check value of 'Pay' button in BepaidApp modal", priority = -3)
     public static void bepaidAppBtnCostValueTest() {
         MainPage mainPage = new MainPage(BaseTest.driver);
         Assert.assertEquals(mainPage.getBepaidAppPayBtnValue(), "Оплатить 1.00 BYN");

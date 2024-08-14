@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class InstalmentEmptyFieldsPlaceholdersTest extends BaseTest {
 
-    @Test(groups = {"functional"}, description = "Check empty fields values of 'Instalment' option in online replenishment block")
+    @Test(groups = {"functional"}, description = "Check empty fields values of 'Instalment' option in online replenishment block", priority = -8)
     public static void instalmentEmptyFieldsPlaceholdersTest() {
         MainPage mainPage = new MainPage(BaseTest.driver);
         mainPage.chooseOrwcSelectOption("Рассрочка");

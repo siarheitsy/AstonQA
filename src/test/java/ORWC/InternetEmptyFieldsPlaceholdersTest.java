@@ -8,7 +8,7 @@ import java.util.Objects;
 
 public class InternetEmptyFieldsPlaceholdersTest extends BaseTest {
 
-    @Test(groups = {"functional"}, description = "Check empty fields values of 'Internet' option in  online replenishment block")
+    @Test(groups = {"functional"}, description = "Check empty fields values of 'Internet' option in  online replenishment block", priority = -9)
     public static void internetEmptyFieldsPlaceholdersTest() {
         MainPage mainPage = new MainPage(BaseTest.driver);
         mainPage.chooseOrwcSelectOption("Домашний интернет");
