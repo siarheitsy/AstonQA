@@ -1,6 +1,10 @@
 package PatchRequest;
 
-import ResponseTemplate.*;
+import ResponseTemplate.ResponseBody;
+import ResponseTemplate.ResponseHeaders;
+import ResponseTemplate.ResponseArgs;
+import ResponseTemplate.ResponseFiles;
+import ResponseTemplate.ResponseForm;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PatchResponseBody extends ResponseBody {

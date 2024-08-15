@@ -1,8 +1,6 @@
 package PostFormDataRequest;
 
 import Global.Global;
-import PostRawTextRequest.PostRawTextResponseBody;
-import PostRawTextRequest.RawText;
 import Specifications.Specifications;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

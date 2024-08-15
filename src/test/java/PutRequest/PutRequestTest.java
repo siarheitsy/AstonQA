@@ -1,7 +1,6 @@
 package PutRequest;
 
 import Global.Global;
-import PostRawTextRequest.PostRawTextResponseBody;
 import Specifications.Specifications;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
