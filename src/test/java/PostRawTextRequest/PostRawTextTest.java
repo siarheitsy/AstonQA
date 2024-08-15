@@ -14,7 +14,7 @@ public class PostRawTextTest {
 
     @Test
     public void postRawTextTest() {
-        String[] data = new String[] {"{", "\n", "\"test\"", ":", "\"value\"", "\n", "}"};
+        String[] data = new String[] {"{", "\n", "\"test\":\"value\"", "\n", "}"};
         String json = null;
         String url = "http://postman-echo.com/post";
         RawText rawText = new RawText("value");
@@ -43,7 +43,7 @@ public class PostRawTextTest {
                 .jsonPath()
                 .getObject("", PostRawTextResponseBody.class);
         Assertions.assertEquals(url, responseBody.getUrl());
-        assertThat(responseBody.getData(), anyOf(startsWith(data[0]), endsWith(data[data.length-1]), containsString(data[1]), containsString(data[2]), containsString(data[3]), containsString(data[4]), containsString(data[5])));
+        assertThat(responseBody.getData(), anyOf(startsWith(data[0]), endsWith(data[data.length-1]), containsString(data[1]), containsString(data[2]), containsString(data[3])));
         Assertions.assertEquals(json, responseBody.getJson());
         isContentLengthInBoundaries = (Integer.parseInt(content_length) >= Integer.parseInt(responseBody.getHeaders().getContent_length()));
         Assertions.assertTrue(isContentLengthInBoundaries);
