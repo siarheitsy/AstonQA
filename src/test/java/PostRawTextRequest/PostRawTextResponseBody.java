@@ -5,12 +5,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostRawTextResponseBody extends ResponseBody {
 
-    private Object data;
+    private String data;
     private ResponseFiles files;
     private ResponseForm form;
     private Object json;
 
-    public PostRawTextResponseBody(@JsonProperty("args") ResponseArgs args, @JsonProperty("data") Object data, @JsonProperty("files") ResponseFiles files, @JsonProperty("form") ResponseForm form, @JsonProperty("headers") ResponseHeaders headers, @JsonProperty("json") Object json, @JsonProperty("url") String url) {
+    public PostRawTextResponseBody(@JsonProperty("args") ResponseArgs args, @JsonProperty("data") String data, @JsonProperty("files") ResponseFiles files, @JsonProperty("form") ResponseForm form, @JsonProperty("headers") ResponseHeaders headers, @JsonProperty("json") Object json, @JsonProperty("url") String url) {
         super(args, headers, url);
         this.data = data;
         this.files = files;
@@ -18,7 +18,7 @@ public class PostRawTextResponseBody extends ResponseBody {
         this.json = json;
     }
 
-    public Object getData() {
+    public String getData() {
         return data;
     }
 
