@@ -1,9 +1,6 @@
 package WebDriverInstance;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -30,7 +27,7 @@ public class WebDriverInstance {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(2500, TimeUnit.MILLISECONDS);
         driver.get("http://www.mts.by/");
-        driver.manage().window().maximize();
+        driver.manage().window().setSize(new Dimension(1920, 1032));
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@class,\"cookie__cancel\")]")));
