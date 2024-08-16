@@ -1,4 +1,4 @@
-package Specifications;
+package PostmanEchoAPI.Specifications;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;

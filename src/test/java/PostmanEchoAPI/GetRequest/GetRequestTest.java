@@ -1,8 +1,8 @@
-package GetRequest;
+package PostmanEchoAPI.GetRequest;
 
-import Global.Global;
-import ResponseTemplate.ResponseBody;
-import Specifications.Specifications;
+import PostmanEchoAPI.Global.Global;
+import PostmanEchoAPI.ResponseTemplate.ResponseBody;
+import PostmanEchoAPI.Specifications.Specifications;
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -40,7 +40,7 @@ public class GetRequestTest {
                 .jsonPath()
                 .getObject("", ResponseBody.class);
         assertAll(
-                "Grouped assertions of GET request",
+                "Grouped assertions of GET Request response",
                 () -> Assertions.assertEquals(url, responseBody.getUrl()),
                 () -> Assertions.assertEquals(host, responseBody.getHeaders().getHost()),
                 () -> Assertions.assertEquals(x_forwarded_proto, responseBody.getHeaders().getX_forwarded_proto()),

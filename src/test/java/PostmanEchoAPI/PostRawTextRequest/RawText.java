@@ -1,4 +1,4 @@
-package PostRawTextRequest;
+package PostmanEchoAPI.PostRawTextRequest;
 
 public class RawText {
 

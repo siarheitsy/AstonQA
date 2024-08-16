@@ -1,4 +1,4 @@
-package Global;
+package PostmanEchoAPI.Global;
 
 public class Global {
 

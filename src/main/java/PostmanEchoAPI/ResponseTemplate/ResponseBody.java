@@ -1,4 +1,4 @@
-package ResponseTemplate;
+package PostmanEchoAPI.ResponseTemplate;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
