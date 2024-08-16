@@ -1,14 +1,13 @@
-package PostFormDataRequest;
+package ResponseTemplate;
 
-import ResponseTemplate.ResponseJson;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class PostFormDataResponseJson extends ResponseJson {
+public class ResponseJson {
 
     private String foo1;
     private String foo2;
 
-    public PostFormDataResponseJson(@JsonProperty("foo1") String foo1, @JsonProperty("foo2") String foo2) {
+    public ResponseJson(@JsonProperty("foo1") String foo1, @JsonProperty("foo2") String foo2) {
         this.foo1 = foo1;
         this.foo2 = foo2;
     }

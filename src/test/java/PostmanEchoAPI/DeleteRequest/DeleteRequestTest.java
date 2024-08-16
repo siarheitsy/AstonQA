@@ -1,6 +1,7 @@
 package DeleteRequest;
 
 import Global.Global;
+import ResponseTemplate.ResponseBody;
 import Specifications.Specifications;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -15,11 +16,11 @@ public class DeleteRequestTest {
     @Test
     public void putRequestTest() {
         String json = null;
-        String url = "http://postman-echo.com/delete";
+        String url = "https://postman-echo.com/delete";
         String data = "This is expected to be sent back as part of response body.";
         String contentLength = "58";
         String host = "postman-echo.com";
-        String x_forwarded_proto = "http";
+        String x_forwarded_proto = "https";
         String connection = "close";
         String x_forwarded_port = "443";
         String accept = "*/*";
@@ -29,7 +30,7 @@ public class DeleteRequestTest {
         String x_amzn_trace_id = "Root=1-66";
 
         Specifications.setupSpecifications(Specifications.requestSpec(Global.URL), Specifications.responseOK200());
-        DeleteResponseBody responseBody = given()
+        ResponseBody responseBody = given()
                 .contentType(content_type)
                 .body(data)
                 .when()
@@ -40,7 +41,7 @@ public class DeleteRequestTest {
                 .extract()
                 .body()
                 .jsonPath()
-                .getObject("", DeleteResponseBody.class);
+                .getObject("", ResponseBody.class);
         Assertions.assertEquals(url, responseBody.getUrl());
         Assertions.assertEquals(data, responseBody.getData());
         Assertions.assertEquals(json, responseBody.getJson());

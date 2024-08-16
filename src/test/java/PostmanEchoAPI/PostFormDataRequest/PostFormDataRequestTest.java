@@ -1,6 +1,7 @@
 package PostFormDataRequest;
 
 import Global.Global;
+import ResponseTemplate.ResponseBody;
 import Specifications.Specifications;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -17,10 +18,10 @@ public class PostFormDataRequestTest {
         String data = "";
         String foo1 = "bar1";
         String foo2 = "bar2";
-        String url = "http://postman-echo.com/post";
+        String url = "https://postman-echo.com/post";
         String contentLength = "19";
         String host = "postman-echo.com";
-        String x_forwarded_proto = "http";
+        String x_forwarded_proto = "https";
         String connection = "close";
         String x_forwarded_port = "443";
         String accept = "*/*";
@@ -30,7 +31,7 @@ public class PostFormDataRequestTest {
         String x_amzn_trace_id = "Root=1-66";
 
         Specifications.setupSpecifications(Specifications.requestSpec(Global.URL), Specifications.responseOK200());
-        PostFormDataResponseBody responseBody = given()
+        ResponseBody responseBody = given()
                 .contentType("application/x-www-form-urlencoded; charset=utf-8")
                 .formParam("foo1", "bar1")
                 .formParam("foo2", "bar2")
@@ -42,7 +43,7 @@ public class PostFormDataRequestTest {
                 .extract()
                 .body()
                 .jsonPath()
-                .getObject("", PostFormDataResponseBody.class);
+                .getObject("", ResponseBody.class);
         Assertions.assertEquals(url, responseBody.getUrl());
         Assertions.assertEquals(data, responseBody.getData());
         Assertions.assertEquals(foo1, responseBody.getForm().getFoo1());
