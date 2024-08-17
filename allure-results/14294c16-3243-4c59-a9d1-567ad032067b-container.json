@@ -1,0 +1,1 @@
+{"uuid":"14294c16-3243-4c59-a9d1-567ad032067b","name":"BepaidApp.BepaidAppCardLogosPresence","children":["04c6d402-8b0c-446d-9329-f37284ac3cac"],"befores":[{"name":"testDriverSetup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1723893483235,"stop":1723893483236}],"afters":[],"start":1723893476377,"stop":1723893483525}
