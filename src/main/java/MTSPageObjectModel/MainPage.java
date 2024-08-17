@@ -57,8 +57,7 @@ public class MainPage {
         List<WebElement> selectOptions = driver.findElements(orwcSelectOption);
         for (int i = 0; i < selectOptions.size(); i++) {
             if (Objects.equals(selectOptions.get(i).getText(), optionText)) {
-                List<WebElement> selectItems = driver.findElements(orwcSelectItem);
-                selectItems.get(i).click();
+                selectOptions.get(i).click();
             }
         }
     }
