@@ -24,7 +24,7 @@ public class WebDriverInstance {
     }
 
     private static WebDriver Initialize() {
-        System.setProperty("webdriver.chrome.driver", "C:\\WebDrivers\\ChromeWebDrivers\\chromedriver-win64\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "WebDrivers/ChromeWebDrivers/chromedriver-win64/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(2500, TimeUnit.MILLISECONDS);
         driver.get("http://www.mts.by/");

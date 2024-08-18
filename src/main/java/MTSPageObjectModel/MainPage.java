@@ -50,6 +50,8 @@ public class MainPage {
     }
 
     public void clickOrwcSelectHeader() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[contains(@class,\"cookie__cancel\")]")));
         driver.findElement(orwcSelectHeader).click();
     }
 
@@ -60,6 +62,7 @@ public class MainPage {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
             wait.until(ExpectedConditions.visibilityOf(selectOptions.get(i)));
             if (Objects.equals(selectOptions.get(i).getText(), optionText)) {
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[contains(@class,\"cookie__cancel\")]")));
                 selectOptions.get(i).click();
             }
         }
@@ -191,6 +194,7 @@ public class MainPage {
     public boolean isBepaidAppModalLoaded() {
         if (isBepaidAppmodalLocatedInFrame()) {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[contains(@class,\"cookie__cancel\")]")));
             wait.until(ExpectedConditions.visibilityOfElementLocated(bepaidAppModalContentBlock));
             return driver.findElement(bepaidAppModalContentBlock).isDisplayed();
         } else {
