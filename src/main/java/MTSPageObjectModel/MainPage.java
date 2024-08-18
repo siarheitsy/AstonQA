@@ -50,13 +50,18 @@ public class MainPage {
     }
 
     public void clickOrwcSelectHeader() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[contains(@class,\"cookie__cancel\")]")));
         driver.findElement(orwcSelectHeader).click();
     }
 
     public void clickOrwcSelectItem(String optionText) {
         List<WebElement> selectOptions = driver.findElements(orwcSelectOption);
         for (int i = 0; i < selectOptions.size(); i++) {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(4));
+            wait.until(ExpectedConditions.visibilityOf(selectOptions.get(i)));
             if (Objects.equals(selectOptions.get(i).getText(), optionText)) {
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[contains(@class,\"cookie__cancel\")]")));
                 selectOptions.get(i).click();
             }
         }
@@ -176,6 +181,8 @@ public class MainPage {
     }
 
     public void submitOrwcFormWithCredentials(String phoneNumber, String sumValue) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//button[contains(@class,\"cookie__cancel\")]")));
         typeOrwcPhoneNumber(phoneNumber);
         typeOrwcSum(sumValue);
         submitOrwcForm();
@@ -187,7 +194,7 @@ public class MainPage {
 
     public boolean isBepaidAppModalLoaded() {
         if (isBepaidAppmodalLocatedInFrame()) {
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             wait.until(ExpectedConditions.visibilityOfElementLocated(bepaidAppModalContentBlock));
             return driver.findElement(bepaidAppModalContentBlock).isDisplayed();
         } else {
