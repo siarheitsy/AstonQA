@@ -28,7 +28,7 @@ public class WebDriverInstance {
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://www.a1.by/ru/");
-        driver.manage().window().maximize();//setSize(new Dimension(1920, 1080));
+        driver.manage().window().maximize();
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
             WebElement cookieDisagreeBtn = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//form[@id='CookiesStickyPanel']//button[@data-action-button='rejectAll']")));

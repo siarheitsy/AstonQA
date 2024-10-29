@@ -38,7 +38,9 @@ public class HomePage {
     }
 
     public void typeNewsSubEmailInput(String email) {
-        driver.findElement(newsSubEmailInput).sendKeys(email);
+        WebElement emailInput = driver.findElement(newsSubEmailInput);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", emailInput);
+        emailInput.sendKeys(email);
     }
 
     public void clickNewsSubBtn() {

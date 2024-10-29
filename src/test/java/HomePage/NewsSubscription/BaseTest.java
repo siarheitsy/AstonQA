@@ -12,6 +12,7 @@ public class BaseTest {
     @BeforeEach
     public void testDriverSetup() {
         driver = WebDriverInstance.getInstance();
+        driver.navigate().refresh();
     }
 
     @AfterAll
